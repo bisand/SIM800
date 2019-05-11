@@ -49,6 +49,11 @@ void SIM800::httpAction(CmdType type, char* str) {
     print(ioBuffer);
 }
 
+void SIM800::httpSsl(CmdType type, char* str) {
+    outBuilder(type, str, P("HTTPSSL"));
+    print(ioBuffer);
+}
+
 // ============================================================
 void SIM800::httpRead(CmdType type, char* str) {
     outBuilder(type, str, P("HTTPREAD"));
